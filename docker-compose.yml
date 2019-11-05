@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  scala:
+    build: .
+    volumes:
+      - .:/broker
+      - ./.ivy2:/root/.ivy2
+      - ./.sbt:/root/.sbt
