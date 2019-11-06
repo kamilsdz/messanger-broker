@@ -6,3 +6,5 @@ lazy val broker = (project in file("."))
     name := "Broker",
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.8" % Test,
   )
+
+mainClass in (Compile, run) := Some("broker.Main")
