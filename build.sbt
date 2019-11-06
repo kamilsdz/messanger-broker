@@ -7,7 +7,8 @@ lazy val broker = (project in file("."))
     resolvers += Resolver.bintrayRepo("cakesolutions", "maven"),
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % "3.0.8" % Test,
-      "net.cakesolutions" %% "scala-kafka-client" % "2.1.0"
+      "net.cakesolutions" %% "scala-kafka-client" % "2.1.0",
+      "ch.qos.logback" % "logback-classic" % "1.2.3"
     )
   )
 
