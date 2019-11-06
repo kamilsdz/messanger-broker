@@ -1,10 +1,14 @@
-ThisBuild / scalaVersion := "2.13.1"
+ThisBuild / scalaVersion := "2.12.8"
 ThisBuild / organization := "com.example"
 
 lazy val broker = (project in file("."))
   .settings(
     name := "Broker",
-    libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.8" % Test,
+    resolvers += Resolver.bintrayRepo("cakesolutions", "maven"),
+    libraryDependencies ++= Seq(
+      "org.scalatest" %% "scalatest" % "3.0.8" % Test,
+      "net.cakesolutions" %% "scala-kafka-client" % "2.1.0"
+    )
   )
 
 mainClass in (Compile, run) := Some("broker.Main")
