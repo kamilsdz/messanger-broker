@@ -4,6 +4,9 @@ services:
   scala:
     build: .
     command: sbt run
+    environment:
+      KAFKA_HOST: kafka:9092
+      KAFKA_GROUP_ID: develop_consumer_group
     depends_on:
       - kafka
     volumes:
