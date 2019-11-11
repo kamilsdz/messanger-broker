@@ -12,6 +12,7 @@ object KafkaConf {
   val autoCommitInterval = 1000
   val sessionTimeoutMs = 30000
   val maxPartitionFetchBytes = 262144
+  val consumerPollSize = 100
 
   def config: Conf[String,String] = {
     Conf(
